@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dem</title>
+</head>
+<body>
+
+</body>
+<script>
+    function count(arr,data) {
+        let count = 0;
+        for(let i= 0; i<arr.length;i++){
+            if(arr[i] == data){
+                count++;
+            }
+        }
+        return count;
+    }
+    function show(arr){
+        for (let i = 0; i<arr.length;i++){
+            document.write(arr[i]+ "__")
+        }
+    }
+
+    let num = [];
+    for ( let i = 0; i<100; ++i){
+        num[i] = Math.floor(Math.random()*101);
+    }
+    let val = parseInt(prompt("Nhap vao:  "));
+    let retVal =count(num,val);
+    show(num);
+    document.write("found "+val+ " occurrences of " + retVal+ ".");
+
+</script>
+</html>
